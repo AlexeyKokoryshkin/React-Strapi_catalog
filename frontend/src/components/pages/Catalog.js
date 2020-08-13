@@ -26,19 +26,21 @@ class Catalog extends Component {
 	
 	render() {
 	  return (
-		<section className="b-productsContainer">
+		<div className="container">
 		{this.state.posts.map((item, i) => (
-			<Link className="posts-preview" to={`/categories/${item.id}`}>
-				<span className="b-productItem" key={i}> 
-				<img className="news-preview-img" src={BLOG_URL + item.img.url} alt="" />
-				<p>{item.author}</p>
-				<h4>{item.title}</h4> 				
-			</span>
-			</Link>
-			
+
+		<div className="card" key={i} >
+			<img src={BLOG_URL + item.img.url} className="card-img-top" alt="" />
+			<div className="card-body">
+			  <h5 className="card-title">{item.title}</h5>
+			  <p className="card-text">{item.author}</p>
+			  <Link className="btn btn-primary" to={`/categories/${item.id}`}>Подробнее</Link>
+			</div>
+		</div>		
+
 		  ) 
 		)}
-		</section>
+		</div>
 	  )
 	 }
 	}
