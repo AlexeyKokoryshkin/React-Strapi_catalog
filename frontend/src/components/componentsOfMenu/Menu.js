@@ -11,8 +11,6 @@ class Menu extends Component {
                         <ul className="nav nav-tabs">
                             { this.props.children }
                         </ul>
-
-
                     </div>
                 </div>
             </nav>  

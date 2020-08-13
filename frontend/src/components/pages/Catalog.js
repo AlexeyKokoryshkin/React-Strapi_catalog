@@ -5,7 +5,7 @@ import Strapi from 'strapi-sdk-javascript/build/main';
 const strapi = new Strapi('http://localhost:1337');
 const BLOG_URL = 'http://localhost:1337';
 
-class Main extends Component {
+class Catalog extends Component {
 
 	  constructor(props) {
 		super(props);
@@ -44,4 +44,4 @@ class Main extends Component {
 	}
 
 	
-export default Main
+export default Catalog

@@ -6,8 +6,7 @@ import Strapi from 'strapi-sdk-javascript/build/main';
 const strapi = new Strapi('http://localhost:1337');
 const BLOG_URL = 'http://localhost:1337';
 
-
-class AboutUs extends Component {
+class BasicList extends Component {
    
   constructor(props) {
 		super(props);
@@ -18,7 +17,7 @@ class AboutUs extends Component {
 	
 	async componentDidMount() {
 	 try {
-	   const posts = await strapi.getEntries('categories?id=10')
+	   const posts = await strapi.getEntries('categories?id=9')
 	   this.setState({ posts });
 	 } 
 	 catch(err) {
@@ -56,4 +55,4 @@ class AboutUs extends Component {
 	}
 }
 
-export default AboutUs
+export default BasicList

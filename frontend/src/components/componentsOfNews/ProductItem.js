@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 const BLOG_URL = 'http://localhost:1337';
 
-class PostPage extends Component {
+class ProductItem extends Component {
   constructor(props) {
     super(props)
 
@@ -47,5 +47,5 @@ class PostPage extends Component {
   }
 }
 
-export default PostPage
+export default ProductItem
 

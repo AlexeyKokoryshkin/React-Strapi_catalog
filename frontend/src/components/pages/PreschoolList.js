@@ -7,7 +7,7 @@ const strapi = new Strapi('http://localhost:1337');
 const BLOG_URL = 'http://localhost:1337';
 
 
-class AboutUs extends Component {
+class PreschoolList extends Component {
    
   constructor(props) {
 		super(props);
@@ -56,4 +56,4 @@ class AboutUs extends Component {
 	}
 }
 
-export default AboutUs
+export default PreschoolList

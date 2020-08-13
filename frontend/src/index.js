@@ -9,38 +9,28 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router-3';
 
 import Layout from './components/layouts/Layout';
-import MainPage from './components/pages/Main';
+import Catalog from './components/pages/Catalog';
 
- import AboutUs from './components/pages/AboutUs';
-import ToUser from './components/pages/ToUser';
-import ToLibrarian from './components/pages/ToLibrarian';
-import ToDistributor from './components/pages/ToDistributor';
-import Faq from './components/pages/Faq'; 
-//import DownloadApp from './components/pages/DownloadApp';
+ import PreschoolList from './components/pages/PreschoolList';
+import PrimaryList from './components/pages/PrimaryList';
+import BasicList from './components/pages/BasicList';
+import SecondaryList from './components/pages/SecondaryList';
+import HigherList from './components/pages/HigherList'; 
 
 import PageNotFound from './components/pages/PageNotFound';
-import PostPage from './components/componentsOfNews/PostPage';
-
-/* import Buying from './components/pages/Buying';
-import BuyingUr from './components/pages/BuyingUr';
-
-import AllNews from './components/pages/AllNews'; */
+import ProductItem from './components/componentsOfNews/ProductItem';
 
 
 ReactDom.render(<Router history={browserHistory}>
     <Route path="/" component={Layout}>
-        <IndexRoute component={MainPage}/>
-         <Route path="/preschool-general-education" component={AboutUs}/>
-        <Route path="/primary-general-education" component={ToUser}/>
-        <Route path="/basic-general-education" component={ToLibrarian}/>
-        <Route path="/secondary-general-education" component={ToDistributor}/>
-        <Route path="/higher-education" component={Faq}/> 
-        {/* <Route path="/downloadApp" component={DownloadApp}/> */}
-      {/*   <Route path="/buying" component={Buying} />
-        <Route path="/buying-ur" component={BuyingUr} />
-        <Route path="/allnews" component={AllNews} /> */}
+        <IndexRoute component={Catalog}/>
+         <Route path="/preschool-general-education" component={PreschoolList}/>
+        <Route path="/primary-general-education" component={PrimaryList}/>
+        <Route path="/basic-general-education" component={BasicList}/>
+        <Route path="/secondary-general-education" component={SecondaryList}/>
+        <Route path="/higher-education" component={HigherList}/> 
         
-        <Route path="/categories/:id" component={PostPage} />
+        <Route path="/categories/:id" component={ProductItem} />
         <Route path="*" component={PageNotFound}/>
     </Route>
 </Router>, document.querySelector('#root'));
