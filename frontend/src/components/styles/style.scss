@@ -241,6 +241,14 @@ box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
 	white-space: nowrap;
 }
 
+.container {
+	.navbar-collapse {
+		z-index: 99;
+	}
+}
+
+
+
 /* Кнопка скролла */
 
 #myBtn {
@@ -274,6 +282,7 @@ box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
 	padding-bottom: 10px;
 	min-height: 380px;
 	background: #5773A5;
+	margin-top: 200px;
 }
 .footer > div{
 	max-width: 1300px;
@@ -536,10 +545,81 @@ box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+	justify-content: space-between;
+	margin-bottom: -80px;
     .card {
         max-width: 17%;
-        margin-top: 30px;
-        border: none;
+        margin-top: 130px;
+		border: none;
+		img {
+			max-width: 80%;
+		}
+		.card-body {
+			flex: 1 1 auto;
+			min-height: 1px;
+			padding: 0; 
+			padding-top: 15px;
+			text-align: left;
+			position: relative;
+			h5 {
+				font-size: 16px;
+			}
+			p {
+				margin-top: 0;
+				margin-bottom: 1rem;
+				font-size: 12px;
+				color: #5673A4;
+			}
+			.b-priceBlock {
+				position: absolute;
+				top: 100%;
+			}
+		}
     }
+}
+
+/* Карточка каталога */
+
+.b-productItem__flexBox {
+	margin-top: 140px;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	.product__information {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		max-width: 63%;
+		justify-content: flex-start;
+		text-align: start;
+		h4 {
+			font-size: 24px;
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		p {
+			color: #466B9F;
+		}
+	}
+	aside {
+		width: 100%;
+		margin-top: 30px;
+		padding: 1em;
+		box-shadow:
+		-20px 20px 0 -17px #fff,
+		20px -20px 0 -17px #fff,
+		20px 20px 0 -20px #c27153,
+		0 0 0 2px #c27153;
+	}
+	img {
+		max-width: 30%;
+		margin-bottom: 25px;
+		box-shadow:
+		0 0 0 1px silver,
+		0 -20px 0 -10px coral,
+		20px 0 0 -10px darkturquoise,
+		0 20px 0 -10px gold,
+		-20px 0 0 -10px chartreuse;
+	}
 }

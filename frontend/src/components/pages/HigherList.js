@@ -30,22 +30,27 @@ class HigherList extends Component {
 
 
 		const productItem = this.state.posts.map((item, index) => {
-		return	<section className="b-productsList" key={index}>
-					
-						{ item.products.map(product => 
-							<>
-							<Link className="news-preview" to={`/categories/${product.id}`}>
-							<span className="b-productItem"> 
-								<img className="news-preview-img" src={BLOG_URL + product.img.url} alt="" />
-								<p>{product.author}</p>
-								<h4>{product.title}</h4>
-								<p>Цена: {product.price} руб</p>								
-							</span>
-							</Link>							
-							</>
-						)}				
-					
-			</section>
+		return	<div className="container" key={index}>	
+				
+		{ item.products.map(product => 
+			<>
+
+			<div className="card">
+				<img className="news-preview-img" src={BLOG_URL + product.img.url} alt="" />	
+				<div className="card-body">
+				<h5 className="card-title">{product.title}</h5>
+				<p className="card-text">{product.author}</p>
+				<div className="b-priceBlock">
+					<h6 className="b-catalogPrice">{product.price} р.</h6>
+					<Link className="btn btn-primary" to={`/categories/${product.id}`}>Подробнее</Link>
+				</div>
+				</div>
+			</div>	
+			
+			</>
+		)}				
+	
+</div>
 		})
 
 

@@ -34,7 +34,10 @@ class Catalog extends Component {
 			<div className="card-body">
 			  <h5 className="card-title">{item.title}</h5>
 			  <p className="card-text">{item.author}</p>
-			  <Link className="btn btn-primary" to={`/categories/${item.id}`}>Подробнее</Link>
+			  <div className="b-priceBlock">
+			  	<h6 className="b-catalogPrice">{item.price} р.</h6>
+				  <Link className="btn btn-primary" to={`/categories/${item.id}`}>Подробнее</Link>
+			  </div>
 			</div>
 		</div>		
 
