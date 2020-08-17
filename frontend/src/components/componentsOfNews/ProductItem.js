@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 //import SidebarNews from './SidebarNews';
 //import * as moment  from 'moment';
 
-const BLOG_URL = 'http://localhost:1337';
+const BLOG_URL = 'http://176.14.246.18:1337';
 
 class ProductItem extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class ProductItem extends Component {
   }
 
   async componentDidMount() {
-    let response = await fetch(`http://localhost:1337/products?id=${this.props.params.id}`)
+    let response = await fetch(`http://176.14.246.18:1337/products?id=${this.props.params.id}`)
     let data = await response.json()
     this.setState({
       loading: false,

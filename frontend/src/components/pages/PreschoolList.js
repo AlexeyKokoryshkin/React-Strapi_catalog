@@ -3,8 +3,8 @@ import { Link } from 'react-router-3';
 
 import Strapi from 'strapi-sdk-javascript/build/main';
 
-const strapi = new Strapi('http://localhost:1337');
-const BLOG_URL = 'http://localhost:1337';
+const strapi = new Strapi('http://176.14.246.18:1337');
+const BLOG_URL = 'http://176.14.246.18:1337';
 
 
 class PreschoolList extends Component {
