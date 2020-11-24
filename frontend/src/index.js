@@ -1,7 +1,4 @@
 //import Strapi from 'strapi-sdk-javascript/build/main';
-
-import * as serviceWorker from './serviceWorker';
-
 import React from 'react';
 import ReactDom from 'react-dom';
 import './components/styles/style.css';
@@ -34,9 +31,4 @@ ReactDom.render(<Router history={browserHistory}>
         <Route path="*" component={PageNotFound}/>
     </Route>
 </Router>, document.querySelector('#root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
 
